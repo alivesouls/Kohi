@@ -1,5 +1,5 @@
 # Kōhī — Coffee is an art, not just a drink
-Kōhī is a single‑file interactive coffee page: all HTML, CSS, JavaScript, copy, and animations live in kohi.html.
+Kōhī is a single‑file interactive coffee page: all HTML, CSS, JavaScript, copy, and animations live in `kohi.html`.
 
 ![Kohi](https://i.imgur.com/BuNcd0D.png)
 # What it includes
