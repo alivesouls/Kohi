@@ -1,7 +1,7 @@
 # Kōhī — Coffee is an art, not just a drink
 Kōhī is a single‑file interactive coffee page: all HTML, CSS, JavaScript, copy, and animations live in ![kohi.html](https://github.com/alivesouls/Kohi/blob/main/kohi.html).
 
-![Kohi](https://imgur.com/a/MlgKmBO)
+![Kohi](https://i.imgur.com/LIDMQPH.png)
 # What it includes
 · Coffee‑themed landing content about origin, roasting, and brewing.
 
