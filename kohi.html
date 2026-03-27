@@ -1,3 +1,5 @@
+-- small changes
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +17,11 @@
   --ease:   cubic-bezier(0.16, 1, 0.3, 1);
   --ease2:  cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Gold palette — same in both modes */
   --gold:       #c8a46e;
   --gold2:      #dbbe8a;
   --gold3:      #8a6c3e;
   --gold-glow:  rgba(200,164,110,0.15);
 
-  /* DARK MODE (default) */
   --ink:    #060504;
   --ink2:   #0b0907;
   --ink3:   #111009;
@@ -35,7 +35,6 @@
   --border2: rgba(200,164,110,0.2);
 }
 
-/* LIGHT MODE */
 [data-theme="light"] {
   --gold:  #d4aa6e;
   --gold2: #e4c48a;
@@ -53,7 +52,6 @@
   --border2: rgba(160,120,60,0.28);
 }
 
-/* System preference fallback */
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
     --ink:    #faf7f2;
@@ -114,7 +112,6 @@ input, textarea { -webkit-user-select: text; user-select: text; }
   background: radial-gradient(circle, rgba(200,164,110,0.045) 0%, transparent 70%);
   will-change: left, top;
 }
-/* Hover state */
 body.h #c-dot { width: 3px; height: 3px; opacity: 0.3; }
 body.h #c-ring {
   width: 58px; height: 58px;
@@ -1471,7 +1468,6 @@ canvas { display: block; }
   }
 }
 
-/* Theme toggle button */
 .theme-btn {
   width: 34px; height: 34px;
   border-radius: 50%;
@@ -1488,8 +1484,6 @@ canvas { display: block; }
 [data-theme="light"] .theme-btn svg,
 body.sys-light .theme-btn svg { transform: rotate(180deg); }
 
-
-/* ══ COMET SKY — light mode wallpaper ══ */
 #comet-sky {
   display: none;
   position: fixed;
@@ -1500,7 +1494,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 [data-theme="light"] #comet-sky { display: block; }
 
-/* Base sky — soft blue-white like comet */
 #comet-sky .sky-base {
   position: absolute; inset: 0;
   background: linear-gradient(
@@ -1517,7 +1510,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   );
 }
 
-/* Soft light beam from top-left like comet */
 #comet-sky .light-beam {
   position: absolute;
   top: -20%;
@@ -1534,7 +1526,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   filter: blur(2px);
 }
 
-/* Warm peach/orange cloud mass — top right like comet */
 #comet-sky .cloud-warm-1 {
   position: absolute;
   top: -5%;
@@ -1584,7 +1575,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   animation: cloud-breathe 20s ease-in-out infinite;
 }
 
-/* Cool blue-white clouds — left and center */
 #comet-sky .cloud-cool-1 {
   position: absolute;
   top: 20%;
@@ -1633,7 +1623,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   animation: cloud-drift-l 28s ease-in-out infinite alternate;
 }
 
-/* Bottom warm glow — horizon */
 #comet-sky .horizon-glow {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -1647,7 +1636,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   );
 }
 
-/* Subtle lens flare streaks like comet */
 #comet-sky .streak-1 {
   position: absolute;
   top: 8%;
@@ -1687,7 +1675,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   50%      { opacity: 0.8; }
 }
 
-/* Fix light mode text colors for readability over sky */
 [data-theme="light"] body { background: #dde8f0; }
 [data-theme="light"] .h-title {
   background: linear-gradient(135deg, #1a2830 0%, #2a4050 30%, #1a3040 60%, #0f2028 100%) !important;
@@ -1710,9 +1697,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] #grain { opacity: 0.008; }
 
 
-/* ══ FULL LIGHT MODE — everything bright and clean ══ */
-
-/* Marquee band */
 [data-theme="light"] .mq-band {
   background: rgba(255,255,255,0.55);
   backdrop-filter: blur(12px);
@@ -1721,7 +1705,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .mq-item { color: #8a7060; }
 [data-theme="light"] .mq-diamond { background: var(--gold3); }
 
-/* Nav */
 [data-theme="light"] #nav.scrolled {
   background: rgba(255,252,248,0.88);
   border-bottom: 1px solid rgba(160,120,60,0.15);
@@ -1737,7 +1720,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] 
 [data-theme="light"] .theme-btn { border-color: rgba(100,70,30,0.2); color: #6a5040; }
 
-/* About section */
 [data-theme="light"] #about { background: transparent; }
 [data-theme="light"] .about-h { color: #1a1008; }
 [data-theme="light"] .about-h em { color: var(--gold3); }
@@ -1747,7 +1729,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .eyebrow { color: var(--gold3); }
 
 
-/* Stats band */
 [data-theme="light"] .stats-band {
   background: rgba(255,252,248,0.7);
   backdrop-filter: blur(16px);
@@ -1763,7 +1744,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 [data-theme="light"] .stat-l { color: #8a7060; }
 
-/* Menu section */
 [data-theme="light"] #menu { background: transparent; }
 [data-theme="light"] .menu-h { color: #1a1008; }
 [data-theme="light"] .menu-h em { color: var(--gold3); }
@@ -1793,7 +1773,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .c-dash { background: var(--gold3); }
 [data-theme="light"] .c-nsmall { color: #a09080; }
 
-/* Philosophy section */
 [data-theme="light"] #philosophy { background: transparent; }
 [data-theme="light"] .phil-inner { background: transparent; }
 [data-theme="light"] .phil-item {
@@ -1812,13 +1791,11 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .phil-title em { color: var(--gold3); }
 [data-theme="light"] .phil-text { color: #6a5040; }
 
-/* Gallery section */
 [data-theme="light"] #gallery { background: transparent; }
 [data-theme="light"] .gal-h { color: #1a1008; }
 [data-theme="light"] .gal-h em { color: var(--gold3); }
 [data-theme="light"] .g { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
 
-/* Quote section */
 [data-theme="light"] #quote { background: transparent; }
 [data-theme="light"] .q-bg { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(160,120,60,0.04), transparent); }
 [data-theme="light"] .q-text { color: #1a1008; }
@@ -1826,7 +1803,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .q-mark { color: rgba(160,120,60,0.06); }
 [data-theme="light"] .q-body { color: #6a5040; }
 
-/* Footer */
 [data-theme="light"] footer {
   background: rgba(255,252,248,0.85);
   backdrop-filter: blur(20px);
@@ -1844,7 +1820,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .ft-divider .ft-div-diamond { background: var(--gold3); }
 [data-theme="light"] .ft-bot { border-top-color: rgba(160,120,60,0.12); }
 
-/* Cart sidebar */
 [data-theme="light"] #cart-sidebar {
   background: rgba(255,252,248,0.97);
   border-color: rgba(160,120,60,0.2);
@@ -1858,7 +1833,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .cart-total-price { color: #1a1008; }
 [data-theme="light"] .cart-close { border-color: rgba(160,120,60,0.2); color: #6a5040; }
 
-/* Auth modal */
 [data-theme="light"] .auth-box {
   background: linear-gradient(135deg, rgba(255,252,248,0.96), rgba(255,255,255,0.92)) !important;
   border-color: rgba(160,120,60,0.2) !important;
@@ -1879,7 +1853,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .auth-field input:focus { border-color: var(--gold3); }
 [data-theme="light"] .auth-close { border-color: rgba(160,120,60,0.2); color: #6a5040; }
 
-/* Lang dropdown */
 [data-theme="light"] .lang-dd {
   background: rgba(255,252,248,0.97);
   border-color: rgba(160,120,60,0.2);
@@ -1892,11 +1865,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .l-foot { border-color: rgba(160,120,60,0.12); color: #b0a090; }
 [data-theme="light"] .l-code { color: #b0a090; }
 
-/* Toast */
-
-
-
-/* Arcade */
 [data-theme="light"] #arcade {
   background: rgba(255,252,248,0.98);
 }
@@ -1909,7 +1877,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] canvas { background: #f0ece4; border-color: rgba(160,120,60,0.15); }
 
 
-/* ══ LIGHT MODE SECTION BACKGROUNDS — warm cream consistent ══ */
 
 [data-theme="light"] #about,
 [data-theme="light"] #menu,
@@ -1919,30 +1886,24 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: transparent;
 }
 
-/* Soft section dividers instead of harsh borders */
 [data-theme="light"] .stats-band {
   background: rgba(255,250,242,0.65);
   backdrop-filter: blur(20px);
 }
 
-/* About text */
 [data-theme="light"] .about-heading { color: #1a1008; }
 [data-theme="light"] .about-heading em { color: var(--gold3); }
 [data-theme="light"] .about-body { color: #6a5040; }
 
-/* Section labels */
 [data-theme="light"] .lbl { color: var(--gold3); }
 [data-theme="light"] .lbl-line { background: var(--gold3); }
 
-/* Menu section label */
 [data-theme="light"] .menu-lbl { color: var(--gold3); }
 
-/* Gallery overlays more visible on light */
 [data-theme="light"] .g-ov {
   background: linear-gradient(160deg, transparent 30%, rgba(20,12,4,0.7) 100%);
 }
 
-/* Quote section warm bg */
 [data-theme="light"] #quote {
   background: transparent;
 }
@@ -1950,14 +1911,12 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(160,120,60,0.05), transparent);
 }
 
-/* Smooth section transitions */
 [data-theme="light"] section,
 [data-theme="light"] .stats-band,
 [data-theme="light"] .mq-band {
   transition: background 0.6s ease;
 }
 
-/* Make the cursor ring visible on light */
 [data-theme="light"] #c-ring {
   border-color: rgba(100,70,30,0.35);
 }
@@ -1968,18 +1927,15 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: radial-gradient(circle, rgba(160,120,60,0.06) 0%, transparent 70%);
 }
 
-/* Progress bar */
 [data-theme="light"] #prog {
   background: linear-gradient(90deg, var(--gold3), var(--gold), var(--gold2));
   box-shadow: 0 0 8px rgba(160,120,60,0.4);
 }
 
-/* Scroll hint */
 [data-theme="light"] .h-scroll-track {
   background: rgba(100,70,30,0.15);
 }
 
-/* About section ring decorations */
 [data-theme="light"] .about-ring-1 {
   border-color: rgba(100,70,30,0.1);
 }
@@ -1991,7 +1947,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   border-color: rgba(100,70,30,0.05);
 }
 
-/* ft-arcade button */
 [data-theme="light"] .ft-arcade-btn {
   background: rgba(160,120,60,0.06);
   border-color: rgba(160,120,60,0.2);
@@ -2002,7 +1957,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   border-color: var(--gold3);
 }
 
-/* Orb in light mode — slightly more vibrant */
 [data-theme="light"] .orb-core {
   box-shadow:
     0 0 60px rgba(180,100,30,0.3),
@@ -2012,7 +1966,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
     inset 30px 30px 60px rgba(0,0,0,0.2);
 }
 
-/* Mobile menu light */
 [data-theme="light"] .mob-menu {
   background: rgba(255,252,248,0.98);
 }
@@ -2023,23 +1976,17 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   color: #6a5040;
 }
 
-/* Ham btn */
 [data-theme="light"] .ham-btn span { background: #3a2010; }
 
-/* Cart overlay */
 [data-theme="light"] .cart-overlay {
   background: rgba(200,180,150,0.4);
 }
 
-/* Auth overlay */
 [data-theme="light"] .auth-overlay {
   background: rgba(180,160,130,0.5);
 }
 
 
-/* ══ LIGHT MODE — text colors matching screenshot ══ */
-
-/* Main headings — deep dark almost black */
 [data-theme="light"] .menu-h,
 [data-theme="light"] .about-h,
 [data-theme="light"] .about-heading,
@@ -2052,7 +1999,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: none !important;
 }
 
-/* Italic gold parts — lighter warm tan, not too saturated */
 [data-theme="light"] .menu-h em,
 [data-theme="light"] .menu-heading em,
 [data-theme="light"] .about-h em,
@@ -2065,7 +2011,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: none !important;
 }
 
-/* Eyebrow labels — same muted tan */
 [data-theme="light"] .eyebrow,
 [data-theme="light"] .lbl,
 
@@ -2074,7 +2019,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   color: #d4ae7e !important;
 }
 
-/* Orb rings — light, barely visible */
 [data-theme="light"] .orb-r1 {
   border-color: rgba(100,70,30,0.08) !important;
 }
@@ -2086,7 +2030,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   border-color: rgba(100,70,30,0.04) !important;
 }
 
-/* Hero rings */
 [data-theme="light"] .h-halo-1 { border-color: rgba(100,70,30,0.09) !important; }
 [data-theme="light"] .h-halo-1::before {
   background: #d4ae7e !important;
@@ -2095,7 +2038,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .h-halo-2 { border-color: rgba(100,70,30,0.05) !important; }
 [data-theme="light"] .h-halo-3 { border-color: rgba(100,70,30,0.025) !important; }
 
-/* Section gold accents */
 [data-theme="light"] .m-type,
 [data-theme="light"] .c-type,
 [data-theme="light"] .phil-num,
@@ -2105,7 +2047,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 [data-theme="light"] .phil-num::after { background: #d4ae7e !important; }
 
-/* Gold lines and diamonds */
 [data-theme="light"] .ft-div-diamond,
 [data-theme="light"] .mq-diamond,
 [data-theme="light"] .h-orn-diamond {
@@ -2118,33 +2059,23 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .h-orn-line.r { background: linear-gradient(to left, transparent, #d4ae7e) !important; }
 
 
-/* Nav underline */
 [data-theme="light"] .nav-links a::after { background: #d4ae7e !important; }
-
-/* Buttons */
-
-
-
 
 [data-theme="light"] .btn-c:hover { border-color: #d4ae7e !important; color: #d4ae7e !important; }
 
-/* Auth tab active */
 [data-theme="light"] .auth-tab.active { color: #d4ae7e !important; border-bottom-color: #d4ae7e !important; }
 [data-theme="light"] .auth-field input:focus { border-color: #d4ae7e !important; }
 
-/* Progress bar */
 [data-theme="light"] #prog {
   background: linear-gradient(90deg, #8a6c3e, #d4ae7e, #d4b07a) !important;
   box-shadow: 0 0 8px rgba(184,149,106,0.4) !important;
 }
 
-/* Cart item price */
 [data-theme="light"] .cart-item-price { color: #d4ae7e !important; }
 [data-theme="light"] .cart-item-type { color: #d4ae7e !important; }
 [data-theme="light"] .cart-total-price { color: #1a1208 !important; }
 
-
-/* ══ LIGHT MODE ORB — warm glowing light sphere ══ */
+  
 [data-theme="light"] .orb-core {
   background: radial-gradient(circle at 36% 32%,
     #fff8ee 0%,
@@ -2197,14 +2128,12 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 
 
-/* ══ LIGHT MODE — fix all dark borders/lines ══ */
 [data-theme="light"] *,
 [data-theme="light"] *::before,
 [data-theme="light"] *::after {
   border-color: rgba(160,120,60,0.15) !important;
 }
 
-/* But re-allow gold accents specifically */
 [data-theme="light"] .m-card::after,
 [data-theme="light"] .phil-item::after,
 [data-theme="light"] .stat-cel::before,
@@ -2213,27 +2142,19 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: #d4ae7e !important;
 }
 
-/* Progress bar keep its own color */
 [data-theme="light"] #prog {
   border: none !important;
   box-shadow: 0 0 8px rgba(184,149,106,0.4) !important;
 }
 
-/* Grain — invisible in light */
 [data-theme="light"] #grain { opacity: 0 !important; }
 
-/* Any box shadows with dark ink color */
 [data-theme="light"] .m-card,
 [data-theme="light"] .phil-item {
   box-shadow:
     0 4px 24px rgba(0,0,0,0.06),
     0 1px 0 rgba(255,255,255,1) inset !important;
 }
-
-
-
-
-
 
 #cart-pill {
   position: fixed;
@@ -2284,7 +2205,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 .cart-pill-btn:hover { opacity: 0.7; }
 
-/* Light mode pill */
 [data-theme="light"] #cart-pill {
   background: rgba(255,252,248,0.94);
   border-color: rgba(160,120,60,0.25);
@@ -2300,7 +2220,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 [data-theme="light"] .cart-pill-btn { color: #d4ae7e; }
 
 
-/* ══ CART LINE INDICATOR ══ */
 #cart-line {
   position: fixed;
   right: 0;
@@ -2327,53 +2246,12 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
   background: linear-gradient(to bottom, transparent, #d4ae7e, transparent);
 }
 
-
-
-
-
 [data-theme="light"] .h-sub {
   font-family: 'Instrument Serif', Georgia, serif !important;
   font-style: normal !important;
   font-weight: 400 !important;
   color: #3a2810 !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 [data-theme="light"] #toast {
   background: rgba(255,252,248,0.97) !important;
@@ -2382,9 +2260,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
 }
 [data-theme="light"] .t-msg { color: #2a1808 !important; }
 
-
-
-/* But don't transition transforms/opacity so animations stay snappy */
 .rv, .h-title, .h-sub, .h-eyebrow, .h-btns,
 #c-dot, #c-ring, #c-trail, #prog,
 .mq-track, .orb-core, .cloud-warm-1, .cloud-warm-2,
@@ -2398,9 +2273,6 @@ body.sys-light .theme-btn svg { transform: rotate(180deg); }
     transform 0.9s var(--ease) !important;
 }
 
-
-
-/* But never override transform during theme switch */
 html.theme-switching .rv,
 html.theme-switching .m-card,
 html.theme-switching .phil-item,
@@ -2415,11 +2287,6 @@ html.theme-switching .orb-core {
     box-shadow 0.45s cubic-bezier(0.4,0,0.2,1),
     opacity 0.45s cubic-bezier(0.4,0,0.2,1) !important;
 }
-
-
-
-
-
 
 html.theme-switching * {
   transition:
@@ -2437,7 +2304,6 @@ html.theme-switching *::after {
 }
 
 
-/* ══ THEME TRANSITION — color only, never transform ══ */
 body,
 .nav-logo, .nav-links a, .logo-word,
 .nb, .lang-btn, .theme-btn,
@@ -2473,26 +2339,20 @@ footer, .ft-logo, .ft-brand-p, .ft-ct, .ft-ul a, .ft-copy, .ft-soc a,
 #theme-overlay.show { opacity: 1; }
 
 
-/* Cart line */
 #cart-line-wrap { display: flex; align-items: center; justify-content: flex-end; }
 
-/* Cart sidebar animation fix */
 #cart-sidebar { opacity: 0; transition: transform 0.5s var(--ease), opacity 0.5s var(--ease) !important; }
 #cart-sidebar.open { transform: translateX(0) !important; opacity: 1 !important; }
 
-/* Toast animation */
 #toast { transform: translateX(-50%) translateY(20px) scale(0.95); transition: opacity 0.45s var(--ease), transform 0.45s var(--ease); }
 #toast.on { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
 
-/* Footer space fix */
 html, body { margin-bottom: 0 !important; padding-bottom: 0 !important; }
 footer { margin-bottom: 0 !important; }
 
-/* Theme overlay */
 #theme-overlay { position: fixed; inset: 0; z-index: 99999; pointer-events: none; opacity: 0; transition: opacity 0.18s ease; }
 #theme-overlay.show { opacity: 1; }
 
-/* Light/dark theme variables */
 [data-theme="light"] {
   --gold:  #d4aa6e;
   --gold2: #e4c48a;
@@ -2509,7 +2369,6 @@ footer { margin-bottom: 0 !important; }
   }
 }
 
-/* ══ COMET SKY — light mode wallpaper ══ */
 #comet-sky {
   display: none;
   position: fixed;
@@ -2521,7 +2380,6 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] #comet-sky { display: block; }
 
 
-/* ── CARD COFFEE ILLUSTRATIONS ── */
 .m-card { overflow: hidden; }
 
 
@@ -2538,8 +2396,6 @@ footer { margin-bottom: 0 !important; }
   filter: drop-shadow(0 12px 32px rgba(0,0,0,0.7));
 }
 
-
-/* ── COFFEE GLOBE ── */
 #coffee-globe-wrap {
   margin-top: 60px;
   display: flex;
@@ -2583,7 +2439,7 @@ footer { margin-bottom: 0 !important; }
   background: var(--border2);
   display: block;
 }
-/* Tooltip */
+
 #globe-tooltip {
   position: absolute;
   background: rgba(10,9,7,0.95);
@@ -2605,15 +2461,11 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] #globe-tooltip { background: rgba(255,252,248,0.97); }
 [data-theme="light"] .gt-name { color: #1a1208; }
 
-
-/* Philosophy items — never hide once shown */
 .phil-item.in {
   opacity: 1 !important;
   transform: none !important;
   filter: none !important;
 }
-
-
 
 [data-theme="light"] .h-orn-line,
 
@@ -2624,28 +2476,15 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] .stats-band { border-color: rgba(160,120,60,0.12) !important; }
 [data-theme="light"] .stat-cel { border-color: rgba(160,120,60,0.12) !important; }
 
-
-/* ── LIGHT MODE LINES FIX ── */
-
-/* Eyebrow lines above headings */
-
-
-/* Section divider lines (the gold horizontal lines at top of each section) */
-
-
-/* The little dashes in phil cards "One —" */
 [data-theme="light"] .phil-num::after {
   background: rgba(160,120,60,0.4) !important;
 }
 
-/* Stats band borders */
 [data-theme="light"] .stats-band { border-color: rgba(160,120,60,0.1) !important; }
 [data-theme="light"] .stat-cel { border-color: rgba(160,120,60,0.1) !important; }
 
-/* Footer divider */
 [data-theme="light"] .ft-div-line { background: rgba(160,120,60,0.18) !important; }
 
-/* Marquee band fade edges */
 [data-theme="light"] .mq-band::before {
   background: linear-gradient(to right, var(--ink2), transparent) !important;
 }
@@ -2653,28 +2492,19 @@ footer { margin-bottom: 0 !important; }
   background: linear-gradient(to left, var(--ink2), transparent) !important;
 }
 
-/* Card rules (horizontal lines inside cards) */
 [data-theme="light"] .m-rule { background: rgba(160,120,60,0.15) !important; }
 
-/* The progress bar line at top */
 [data-theme="light"] #prog-track { background: rgba(160,120,60,0.08) !important; }
 
-/* Globe dark sphere — fix for light mode */
 [data-theme="light"] #globe-canvas {
   filter: invert(0.08) sepia(0.3) brightness(1.1);
 }
 
-
-/* ── FIX EY-LINE IN LIGHT MODE ── */
-
-
-/* The thick line is actually the section top border from .mq-band and .stats-band */
 [data-theme="light"] .mq-band {
   border-top-color: rgba(160,120,60,0.08) !important;
   border-bottom-color: rgba(160,120,60,0.08) !important;
 }
 
-/* Footer arcade btn border causing line in screenshot 6 */
 [data-theme="light"] .ft-arcade-btn {
   border-color: rgba(160,120,60,0.2) !important;
 }
@@ -2682,11 +2512,10 @@ footer { margin-bottom: 0 !important; }
   border-color: rgba(160,120,60,0.4) !important;
 }
 
-/* Universal: all borders in light mode super subtle */
 [data-theme="light"] * {
   border-color: rgba(160,120,60,0.12) !important;
 }
-/* But restore gold accents */
+
 [data-theme="light"] .nb-fill,
 [data-theme="light"] .btn-a,
 [data-theme="light"] .auth-tab.active,
@@ -2699,7 +2528,6 @@ footer { margin-bottom: 0 !important; }
   border-color: var(--gold) !important;
 }
 
-
 [data-theme="light"] #prog {
   background: linear-gradient(90deg, transparent, rgba(160,120,60,0.5), rgba(160,120,60,0.8), rgba(160,120,60,0.5)) !important;
   box-shadow: none !important;
@@ -2709,9 +2537,6 @@ footer { margin-bottom: 0 !important; }
 
 [data-theme="light"] .ey-line { display: block !important; background: rgba(120,80,30,0.4) !important; width: 22px !important; height: 1px !important; }
 
-/* ══ ULTRA PREMIUM ══ */
-
-/* Nav link spacing — more elegant */
 .nav-links { gap: 48px !important; }
 .nav-links a {
   font-size: 0.6rem !important;
@@ -2725,13 +2550,11 @@ footer { margin-bottom: 0 !important; }
   letter-spacing: 0.42em !important;
 }
 
-/* Hero title — tighter tracking */
 .h-title {
   letter-spacing: -0.02em !important;
   line-height: 0.88 !important;
 }
 
-/* Smoother card hover */
 .m-card {
   transition: background 0.6s var(--ease), border-color 0.6s,
               transform 0.55s var(--ease), box-shadow 0.6s,
@@ -2745,7 +2568,6 @@ footer { margin-bottom: 0 !important; }
     0 1px 0 rgba(200,164,110,0.3) inset !important;
 }
 
-/* More refined btn-a */
 .btn-a {
   height: 52px !important;
   padding: 0 40px !important;
@@ -2753,7 +2575,6 @@ footer { margin-bottom: 0 !important; }
   font-size: 0.6rem !important;
 }
 
-/* Richer gold gradient on stat numbers */
 .stat-n {
   background: linear-gradient(135deg, var(--cream) 0%, var(--gold2) 40%, var(--gold) 70%, var(--gold3) 100%) !important;
   -webkit-background-clip: text !important;
@@ -2761,29 +2582,24 @@ footer { margin-bottom: 0 !important; }
   -webkit-text-fill-color: transparent !important;
 }
 
-/* More elegant footer logo */
 .ft-logo {
   font-size: 4.5rem !important;
   letter-spacing: 0.06em !important;
 }
 
-/* Thicker progress bar */
 #prog { height: 2px !important; }
 
-/* Refined cart sidebar */
 #cart-sidebar {
   width: 420px !important;
   box-shadow: -40px 0 120px rgba(0,0,0,0.7) !important;
 }
 
-/* Smoother toast */
 #toast {
   border-radius: 100px !important;
   padding: 12px 28px !important;
   letter-spacing: 0.18em !important;
 }
 
-/* Gallery image overlay more dramatic */
 .g-ov {
   background: linear-gradient(160deg, transparent 20%, rgba(6,5,4,0.75) 100%) !important;
   transition: background 0.6s var(--ease) !important;
@@ -2792,13 +2608,11 @@ footer { margin-bottom: 0 !important; }
   background: linear-gradient(160deg, transparent 0%, rgba(6,5,4,0.5) 100%) !important;
 }
 
-/* Quote text more dramatic */
 .q-text {
   line-height: 1.15 !important;
   letter-spacing: -0.01em !important;
 }
 
-/* Light mode nav transparency */
 [data-theme="light"] #nav {
   background: transparent !important;
   border-color: transparent !important;
@@ -2815,38 +2629,28 @@ footer { margin-bottom: 0 !important; }
   color: var(--gold3) !important;
 }
 
-
-/* ══ LIGHT MODE FULL SYNC ══ */
-
-/* Nav */
 [data-theme="light"] .nav-links a { color: rgba(26,20,8,0.6) !important; }
 [data-theme="light"] .nav-links a:hover { color: #1a1008 !important; }
 [data-theme="light"] .logo-word { color: #1a1008 !important; }
 
-/* Hero */
 [data-theme="light"] .h-eyebrow { color: #7a6050 !important; }
 [data-theme="light"] .h-sub { color: #3a2810 !important; font-family: 'Instrument Serif', serif !important; }
 [data-theme="light"] .h-scroll-lbl { color: #7a6050 !important; }
 
-
-/* Marquee */
 [data-theme="light"] .mq-band { background: rgba(245,240,232,0.7) !important; }
 [data-theme="light"] .mq-item { color: #8a7060 !important; }
 [data-theme="light"] .mq-band::before { background: linear-gradient(to right, var(--ink2), transparent) !important; }
 [data-theme="light"] .mq-band::after  { background: linear-gradient(to left,  var(--ink2), transparent) !important; }
 
-/* Stats */
 [data-theme="light"] .stats-band { background: rgba(245,240,232,0.65) !important; }
 [data-theme="light"] .stat-n { background: linear-gradient(135deg,#1a1008,#8a6c3e,#c8a46e) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
 [data-theme="light"] .stat-l { color: #8a7060 !important; }
 
-/* About */
 [data-theme="light"] .about-h { color: #1a1008 !important; -webkit-text-fill-color: #1a1008 !important; background: none !important; }
 [data-theme="light"] .about-h em { color: #d4ae7e !important; -webkit-text-fill-color: #d4ae7e !important; }
 [data-theme="light"] .about-p { color: #6a5040 !important; }
 [data-theme="light"] .btn-c { color: #3a2010 !important; border-color: rgba(100,70,30,0.3) !important; }
 
-/* Menu */
 [data-theme="light"] .menu-h { color: #1a1208 !important; -webkit-text-fill-color: #1a1208 !important; background: none !important; }
 [data-theme="light"] .menu-h em { color: #d4ae7e !important; -webkit-text-fill-color: #d4ae7e !important; }
 [data-theme="light"] .menu-aside { color: #8a7060 !important; }
@@ -2858,24 +2662,20 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] .m-type { color: #d4ae7e !important; }
 [data-theme="light"] .m-num-bg { color: rgba(160,120,60,0.07) !important; }
 
-/* Philosophy */
 [data-theme="light"] .phil-item { background: linear-gradient(150deg,rgba(255,252,248,0.92),rgba(255,255,255,0.85)) !important; box-shadow: 0 4px 24px rgba(0,0,0,0.06) !important; }
 [data-theme="light"] .phil-title { color: #1a1008 !important; -webkit-text-fill-color: #1a1008 !important; }
 [data-theme="light"] .phil-title em { color: #d4ae7e !important; -webkit-text-fill-color: #d4ae7e !important; }
 [data-theme="light"] .phil-text { color: #6a5040 !important; }
 [data-theme="light"] .phil-num { color: #d4ae7e !important; -webkit-text-fill-color: #d4ae7e !important; }
 
-/* Gallery */
 [data-theme="light"] .gal-h { color: #1a1208 !important; -webkit-text-fill-color: #1a1208 !important; background: none !important; }
 [data-theme="light"] .gal-h em { color: #d4ae7e !important; -webkit-text-fill-color: #d4ae7e !important; }
 
-/* Quote */
 [data-theme="light"] .q-text { color: #1a1208 !important; }
 [data-theme="light"] .q-text em { color: #d4ae7e !important; }
 [data-theme="light"] .q-body { color: #6a5040 !important; }
 [data-theme="light"] .q-mark { color: rgba(160,120,60,0.05) !important; }
 
-/* Footer */
 [data-theme="light"] footer { background: rgba(245,240,232,0.88) !important; backdrop-filter: blur(20px) !important; }
 [data-theme="light"] .ft-logo { color: #1a1008 !important; -webkit-text-fill-color: #1a1008 !important; background: none !important; }
 [data-theme="light"] .ft-brand-p { color: #8a7060 !important; }
@@ -2886,14 +2686,12 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] .ft-div-line { background: rgba(160,120,60,0.15) !important; }
 [data-theme="light"] .ft-arcade-btn { color: #d4ae7e !important; }
 
-/* Cart */
 [data-theme="light"] #cart-sidebar { background: rgba(255,252,248,0.98) !important; }
 [data-theme="light"] .cart-title { color: #1a1008 !important; }
 [data-theme="light"] .cart-item-name { color: #1a1008 !important; }
 [data-theme="light"] .cart-total-price { color: #1a1008 !important; }
 [data-theme="light"] .cart-total-label { color: #8a7060 !important; }
 
-/* Auth */
 [data-theme="light"] .auth-box { background: rgba(255,252,248,0.97) !important; }
 [data-theme="light"] .auth-logo { color: #1a1008 !important; }
 [data-theme="light"] .auth-sub { color: #8a7060 !important; }
@@ -2902,27 +2700,22 @@ footer { margin-bottom: 0 !important; }
 [data-theme="light"] .auth-field input { background: rgba(160,120,60,0.04) !important; color: #1a1008 !important; }
 [data-theme="light"] .auth-field label { color: #8a7060 !important; }
 
-/* Toast */
 [data-theme="light"] #toast { background: rgba(255,252,248,0.97) !important; }
 [data-theme="light"] .t-msg { color: #2a1808 !important; }
 
-/* Lang dropdown */
 [data-theme="light"] .lang-dd { background: rgba(255,252,248,0.98) !important; box-shadow: 0 24px 60px rgba(0,0,0,0.1) !important; }
 [data-theme="light"] .l-opt { color: #6a5040 !important; }
 [data-theme="light"] .l-opt:hover { background: rgba(160,120,60,0.06) !important; color: #1a1008 !important; }
 [data-theme="light"] .l-hdr { color: #b0a090 !important; }
 
-/* Click effect adapts to light mode */
 [data-theme="light"] #click-canvas { mix-blend-mode: multiply; }
 
-/* Orb light mode */
 [data-theme="light"] .orb-core {
   background: radial-gradient(circle at 38% 34%, #fff8ee 0%, #fde8c0 12%, #f8d090 24%, #f0b060 38%, #e09040 52%, #c87030 65%, #a05020 78%, #783010 90%, #501808 100%) !important;
   box-shadow: 0 0 80px rgba(240,160,60,0.45), 0 0 160px rgba(220,140,50,0.2), inset 0 0 60px rgba(255,255,255,0.08), inset -20px -20px 60px rgba(80,24,8,0.35) !important;
 }
 
 
-/* ── LIGHT MODE BUTTONS ── */
 [data-theme="light"] .btn-a {
   border-color: #c8964e !important;
   color: #c8964e !important;
@@ -2960,7 +2753,6 @@ footer { margin-bottom: 0 !important; }
 }
 
 
-/* Cursor transition override */
 #c-dot, #c-ring, #c-trail {
   transition: width 0.45s cubic-bezier(0.16,1,0.3,1),
               height 0.45s cubic-bezier(0.16,1,0.3,1),
@@ -3693,11 +3485,9 @@ async function translateTo(lang,name){
         'IT':'it','JA':'ja','ZH':'zh','AR':'ar','PT':'pt','KO':'ko'};
       const tl=langMap[lang]||lang.toLowerCase();
 
-      /* Try multiple free translation endpoints */
       async function translateOne(text){
         const plain=text.replace(/<[^>]+>/g,'');
         if(!plain.trim()) return text;
-        /* Attempt 1: MyMemory via no-cors workaround — use URL with callback */
         try{
           const url='https://api.mymemory.translated.net/get?q='+encodeURIComponent(plain)+'&langpair=en|'+tl+'&de=kohi@coffee.com';
           const r=await fetch(url,{mode:'cors'});
@@ -3706,13 +3496,11 @@ async function translateTo(lang,name){
             return j.responseData.translatedText;
           }
         }catch(e){}
-        /* Attempt 2: Lingva Translate (open source, CORS-friendly) */
         try{
           const r=await fetch('https://lingva.ml/api/v1/en/'+tl+'/'+encodeURIComponent(plain));
           const j=await r.json();
           if(j.translation) return j.translation;
         }catch(e){}
-        /* Attempt 3: LibreTranslate public instance */
         try{
           const r=await fetch('https://translate.terraprint.co/translate',{
             method:'POST',
@@ -3906,7 +3694,6 @@ function renderCart(){
   const qty = cart.reduce((s,i)=>s+i.qty,0);
   if(totalEl) totalEl.textContent = '₽'+Math.round(total);
   if(countEl){ countEl.textContent = qty; countEl.classList.toggle('has-items', cart.length>0); }
-  /* Update pill */
   const line = document.getElementById('cart-line');
   if(line){
     if(cart.length>0){
@@ -4353,18 +4140,15 @@ function initSnake(){
     }
   }
 
-  /* Load saved or use system */
   const saved = localStorage.getItem('kohi-theme');
   applyTheme(saved || getSystemPref());
 
-  /* Toggle on click */
   if(btn) btn.addEventListener('click', () => {
     const current = root.getAttribute('data-theme');
     applyTheme(current === 'light' ? 'dark' : 'light');
     if(typeof SFX !== 'undefined') SFX.click();
   });
 
-  /* Listen for system changes */
   window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
     if(!localStorage.getItem('kohi-theme')) {
       applyTheme(e.matches ? 'light' : 'dark');
@@ -4373,7 +4157,6 @@ function initSnake(){
 })();
 
 
-/* Nav right entrance animations */
 (function(){
   var items = [
     ['.lang-wrap', 300],
@@ -4395,7 +4178,6 @@ function initSnake(){
 })();
 
 
-/* ── COFFEE GLOBE ── */
 (function(){
   const canvas = document.getElementById('globe-canvas');
   if(!canvas) return;
@@ -4405,7 +4187,6 @@ function initSnake(){
   const ttType = document.getElementById('gt-type');
   const ttDesc = document.getElementById('gt-desc');
 
-  // Coffee farm locations [name, lat, lon, type, desc]
   const farms = [
     ['Yirgacheffe, Ethiopia', 6.1, 38.2, 'Single Origin · Light Roast', 'Floral, citrus, jasmine notes. Our primary Ethiopian source since 2026.'],
     ['Huila, Colombia', 1.9, -76.0, 'Single Origin · Medium Roast', 'Caramel sweetness, stone fruit, clean finish. High altitude 1800m+.'],
@@ -4445,11 +4226,9 @@ function initSnake(){
   }
 
   function rotatePoint(p, rx, ry) {
-    // Rotate around Y axis
     let x = p.x * Math.cos(ry) - p.z * Math.sin(ry);
     let z = p.x * Math.sin(ry) + p.z * Math.cos(ry);
     let y = p.y;
-    // Rotate around X axis
     let y2 = y * Math.cos(rx) - z * Math.sin(rx);
     let z2 = y * Math.sin(rx) + z * Math.cos(rx);
     return { x, y: y2, z: z2 };
@@ -4461,7 +4240,6 @@ function initSnake(){
     const R = Math.min(W, H) * 0.38;
     ctx.clearRect(0, 0, W, H);
 
-    // Draw sphere
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     const grad = ctx.createRadialGradient(cx - R*0.3, cy - R*0.3, R*0.1, cx, cy, R);
     if(isLight) {
@@ -4478,7 +4256,6 @@ function initSnake(){
     ctx.fillStyle = grad;
     ctx.fill();
 
-    // Globe glow
     const glow = ctx.createRadialGradient(cx, cy, R * 0.7, cx, cy, R * 1.2);
     glow.addColorStop(0, 'transparent');
     glow.addColorStop(1, 'rgba(200,164,110,0.06)');
@@ -4487,7 +4264,6 @@ function initSnake(){
     ctx.fillStyle = glow;
     ctx.fill();
 
-    // Draw latitude lines
     for(let lat = -60; lat <= 60; lat += 30) {
       ctx.beginPath();
       let first = true;
@@ -4504,7 +4280,6 @@ function initSnake(){
       ctx.stroke();
     }
 
-    // Draw longitude lines
     for(let lon = -180; lon < 180; lon += 30) {
       ctx.beginPath();
       let first = true;
@@ -4521,7 +4296,6 @@ function initSnake(){
       ctx.stroke();
     }
 
-    // Equator highlight
     ctx.beginPath();
     let first = true;
     for(let lon = -180; lon <= 180; lon += 4) {
@@ -4536,14 +4310,12 @@ function initSnake(){
     ctx.lineWidth = 1 * window.devicePixelRatio;
     ctx.stroke();
 
-    // Sphere rim highlight
     ctx.beginPath();
     ctx.arc(cx, cy, R, 0, Math.PI * 2);
     ctx.strokeStyle = isLight ? 'rgba(120,80,30,0.2)' : 'rgba(200,164,110,0.15)';
     ctx.lineWidth = 1 * window.devicePixelRatio;
     ctx.stroke();
 
-    // Inner light
     const innerLight = ctx.createRadialGradient(cx - R*0.35, cy - R*0.35, 0, cx - R*0.2, cy - R*0.2, R*0.5);
     innerLight.addColorStop(0, 'rgba(200,164,110,0.06)');
     innerLight.addColorStop(1, 'transparent');
@@ -4552,7 +4324,6 @@ function initSnake(){
     ctx.fillStyle = innerLight;
     ctx.fill();
 
-    // Draw farm pins
     let newHovered = null;
     farms.forEach((farm, i) => {
       const [name, lat, lon] = farm;
@@ -4565,7 +4336,6 @@ function initSnake(){
       const isHovered = hoveredFarm === i;
       const pinR = (isHovered ? 6 : 4) * window.devicePixelRatio;
 
-      // Pin glow
       if(isHovered) {
         const pinGlow = ctx.createRadialGradient(sx, sy, 0, sx, sy, pinR * 4);
         pinGlow.addColorStop(0, 'rgba(200,164,110,0.4)');
@@ -4576,27 +4346,23 @@ function initSnake(){
         ctx.fill();
       }
 
-      // Pulse ring
       ctx.beginPath();
       ctx.arc(sx, sy, pinR * 2.5, 0, Math.PI * 2);
       ctx.strokeStyle = `rgba(200,164,110,${fade * 0.3})`;
       ctx.lineWidth = 1 * window.devicePixelRatio;
       ctx.stroke();
 
-      // Pin dot
       ctx.beginPath();
       ctx.arc(sx, sy, pinR, 0, Math.PI * 2);
       ctx.fillStyle = isLight ? `rgba(120,80,30,${fade * (isHovered ? 1 : 0.85)})` : `rgba(200,164,110,${fade * (isHovered ? 1 : 0.85)})`;
       ctx.fill();
 
-      // Pin label
       if(isHovered || fade > 0.5) {
         ctx.font = `${Math.round(10 * window.devicePixelRatio)}px Inter, sans-serif`;
         ctx.fillStyle = `rgba(240,232,216,${fade * 0.9})`;
         ctx.fillText(name.split(',')[0], sx + pinR * 1.8, sy + 3 * window.devicePixelRatio);
       }
 
-      // Check hover
       const rect = canvas.getBoundingClientRect();
       if(lastMX && Math.hypot((lastMX - rect.left) * window.devicePixelRatio - sx,
                                (lastMY - rect.top) * window.devicePixelRatio - sy) < pinR * 3) {
@@ -4618,7 +4384,6 @@ function initSnake(){
     animId = requestAnimationFrame(animate);
   }
 
-  // Pause when off screen
   const globeObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if(e.isIntersecting) animate(0);
@@ -4627,7 +4392,6 @@ function initSnake(){
   }, {threshold: 0.1});
   globeObs.observe(canvas);
 
-  // Drag to rotate
   canvas.addEventListener('mousedown', e => {
     dragging = true;
     lastMX = e.clientX;
@@ -4647,7 +4411,6 @@ function initSnake(){
   });
   window.addEventListener('mouseup', () => { dragging = false; });
 
-  // Touch support
   canvas.addEventListener('touchstart', e => {
     dragging = true;
     lastMX = e.touches[0].clientX;
@@ -4666,7 +4429,6 @@ function initSnake(){
   }, {passive:true});
   canvas.addEventListener('touchend', () => { dragging = false; }, {passive:true});
 
-  // Hover tooltip
   canvas.addEventListener('mousemove', e => {
     if(hoveredFarm !== null) {
       const farm = farms[hoveredFarm];
@@ -4688,7 +4450,6 @@ function initSnake(){
 })();
 
 
-/* ══ DYNAMIC CART LINE LIGHTING ══ */
 (function(){
   const wrap = document.getElementById('cart-line-wrap');
   const line = document.getElementById('cart-line');
@@ -4709,7 +4470,6 @@ function initSnake(){
   });
 })();
 
-/* ══ PREMIUM CLICK EFFECT ══ */
 (function(){
   const canvas = document.createElement('canvas');
   canvas.id = 'click-canvas';
@@ -4724,10 +4484,8 @@ function initSnake(){
   const particles = [];
 
   function spawnClick(x, y) {
-    // Ripple ring
     particles.push({ type:'ring', x, y, r:0, maxR: 36, life:1, alpha:0.4 });
     particles.push({ type:'ring', x, y, r:0, maxR: 56, life:1, alpha:0.18, delay:0.06 });
-    // Gold sparks
     for(let i = 0; i < 7; i++){
       const angle = (Math.PI * 2 / 12) * i + Math.random() * 0.3;
       const speed = 0.6 + Math.random() * 1.4;
@@ -4741,7 +4499,6 @@ function initSnake(){
         delay: Math.random() * 0.05
       });
     }
-    // Center flash
     particles.push({ type:'flash', x, y, life:0.6 });
   }
 
@@ -4804,7 +4561,6 @@ function initSnake(){
 })();
 
 
-/* ══ CURRENCY BY LANGUAGE ══ */
 const CURRENCIES = {
   EN: { symbol: '£', rate: 0.0099 },
   RU: { symbol: '₽', rate: 1 },
@@ -4825,7 +4581,6 @@ const BASE_PRICES = {
 
 function updateCurrency(lang) {
   const cur = CURRENCIES[lang] || CURRENCIES['RU'];
-  // Update card prices
   document.querySelectorAll('.m-price').forEach((el, i) => {
     const key = 'c' + (i + 1);
     const base = BASE_PRICES[key];
@@ -4833,13 +4588,10 @@ function updateCurrency(lang) {
     const converted = Math.round(base * cur.rate);
     el.textContent = cur.symbol + converted.toLocaleString();
   });
-  // Store current currency for cart
   window.currentCurrency = cur;
-  // Re-render cart with new currency
   if(typeof renderCart === 'function') renderCart();
 }
 
-// Override renderCart total display
 const _origRenderCart = window.renderCart;
 window.renderCart = function() {
   const el = document.getElementById('cartItems');
@@ -4869,12 +4621,9 @@ window.renderCart = function() {
   `).join('');
 };
 
-// Hook into translateTo
 const _origTranslateTo = window.translateTo;
 window.addEventListener('load', () => {
-  // Set default RU currency
   window.currentCurrency = CURRENCIES['RU'];
-  // Patch lang options
   document.querySelectorAll('.l-opt').forEach(o => {
     o.addEventListener('click', () => {
       setTimeout(() => updateCurrency(o.dataset.lang), 100);
