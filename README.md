@@ -3,13 +3,13 @@ Kōhī is a single‑file interactive coffee page: all HTML, CSS, JavaScript, co
 
 ![Kohi](https://i.imgur.com/BuNcd0D.png)
 # What it includes
-· Coffee‑themed landing content about origin, roasting, and brewing.
+**·** Coffee‑themed landing content about origin, roasting, and brewing.
 
-· Animated sections and transitions.
+**·** Animated sections and transitions.
 
-· Simple arcade‑style interactions around coffee.
+**·** Simple arcade‑style interactions around coffee.
 
-· No backend, no build step — browser‑only frontend.
+**·** No backend, no build step — browser‑only frontend.
 
 ![Kohi](https://i.imgur.com/R4CYQZq.png)
 # File
